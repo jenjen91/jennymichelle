@@ -1,7 +1,5 @@
 .App {
   height: 100%;
-display: flex;
-flex-direction: row;
 }
 
 .App-title {
@@ -12,16 +10,10 @@ flex-direction: row;
 }
 
 .container{
+  padding: 48px 0;
   height: 100%;
-  flex-grow: 1;
-  text-align: center;
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.content{
-  padding: 12px;
+  flex-direction: row;
 }
 
 .links{
