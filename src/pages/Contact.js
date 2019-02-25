@@ -6,6 +6,12 @@ import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 const styles = theme => ({
   container: {
     maxWidth: 500,
@@ -20,19 +26,49 @@ const styles = theme => ({
 class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = {sendt: false}
+    this.state = {sendt: false, error: false}
   }
 
-  handleSubmit = (event) => {
-    console.dir(event)
-    this.setState({sendt: true})
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    this.setState({sendt: true});
+
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
+    });
+    .catch(error => {
+      if(error){ this.setState({error: true})}
+    });
   }
+
   renderForm = () => {
     const { classes } = this.props;
     return (
-      <form name="contact" method="POST" netlify netlifyHoneypot="bot-field" onSubmit={this.handleSubmit}>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={this.handleSubmit}
+      >
         <input type="hidden" name="form-name" value="contact" />
-
+        <p hidden>
+           <label>
+             Don’t fill this out:{" "}
+             <input name="bot-field" onChange={this.handleChange} />
+           </label>
+         </p>
         <TextField
            required
            id="outlined-required"
@@ -41,9 +77,10 @@ class Contact extends Component {
            margin="normal"
            variant="outlined"
            fullWidth
-           autoComplete="name given-name family-name"
+           autoComplete="name"
            name="name"
            type="text"
+           onChange={this.handleChange}
          />
 
         <TextField
@@ -57,6 +94,7 @@ class Contact extends Component {
            fullWidth
            autoComplete="email"
            name="email"
+           onChange={this.handleChange}
          />
          <TextField
            required
@@ -68,6 +106,7 @@ class Contact extends Component {
            margin="normal"
            variant="outlined"
            fullWidth
+           onChange={this.handleChange}
          />
         <p>
           <Button variant="contained" type="submit"> Send </Button>
@@ -81,6 +120,11 @@ class Contact extends Component {
       Message successfully submitted.
     </Typography>
   )
+  renderError = () => (
+    <Typography variant="subtitle1" gutterBottom>
+      Error. Something went wrong, please try again.
+    </Typography>
+  )
   render() {
     const { classes } = this.props;
 
@@ -90,7 +134,7 @@ class Contact extends Component {
           Contact
         </Typography>
         <div className={classes.container}>
-          { this.state.sendt ? this.renderSuccess() : this.renderForm() }
+          { !this.state.sendt ? this.renderForm() : this.state.error ? this.renderError() : this.renderSuccess() }
         </div>
       </div>
     );
