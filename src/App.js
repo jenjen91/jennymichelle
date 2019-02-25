@@ -19,6 +19,7 @@ const styles = theme => ({
   content: {
     padding: 12,
     flexGrow: 1,
+    textAlign: 'center',
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
