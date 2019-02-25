@@ -30,7 +30,7 @@ class Contact extends Component {
   renderForm = () => {
     const { classes } = this.props;
     return (
-      <form name="contact" method="POST" data-netlify="true" onSubmit={this.handleSubmit}>
+      <form name="contact" method="POST" netlify dataNetlifyRecaptcha="true" onSubmit={this.handleSubmit}>
         <TextField
            required
            id="outlined-required"
