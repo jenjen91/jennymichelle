@@ -46,8 +46,7 @@ class Contact extends Component {
         "form-name": form.getAttribute("name"),
         ...this.state
       })
-    });
-    .catch(error => {
+    }).catch(error => {
       if(error){ this.setState({error: true})}
     });
   }
