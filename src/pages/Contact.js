@@ -30,7 +30,7 @@ class Contact extends Component {
   renderForm = () => {
     const { classes } = this.props;
     return (
-      <form name="contact" method="POST" netlify netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
+      <form name="contact" method="POST" netlify netlifyHoneypot="bot-field" onSubmit={this.handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
 
         <TextField
