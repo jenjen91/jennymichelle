@@ -69,21 +69,25 @@ class SideBar extends Component {
         >
         <div className={classes.list}>
           <List component="nav">
-            <ListItemLink to="/programming">
+            <ListItemLink to="/programming" onClick={this.handleDrawerClose}>
               <ListItemText primary="Programming" />
               <ListItemIcon><Icon>apps</Icon></ListItemIcon>
             </ListItemLink>
-            <ListItemLink to="/design">
+            <ListItemLink to="/design" onClick={this.handleDrawerClose}>
               <ListItemText primary="Graphic Design" />
               <ListItemIcon><Icon>color_lens</Icon></ListItemIcon>
             </ListItemLink>
           </List>
           <Divider />
           <List component="nav">
-            <ListItemLink to="/contact">
+            <ListItemLink to="/contact" onClick={this.handleDrawerClose}>
               <ListItemText primary="Contact" />
               <ListItemIcon><Icon>mail</Icon></ListItemIcon>
             </ListItemLink>
+            <ListItem button component="a" href="https://www.linkedin.com/in/jennymichelle/" target="_blank">
+              <ListItemText primary="LinkedIn" />
+              <ListItemIcon><Icon>link</Icon></ListItemIcon>
+            </ListItem>
           </List>
         </div>
         </Drawer>

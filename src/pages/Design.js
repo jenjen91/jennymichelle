@@ -32,7 +32,7 @@ class Design extends Component {
 
     return (
       <div>
-      <Typography variant="h2" gutterBottom>
+      <Typography variant="h3" gutterBottom>
         Graphic design
       </Typography>
       <Typography variant="body1" gutterBottom>
