@@ -70,7 +70,7 @@ class Contact extends Component {
          </p>
         <TextField
            required
-           id="outlined-required"
+           id="name"
            label="Name"
            className={classes.textField}
            margin="normal"
@@ -84,7 +84,7 @@ class Contact extends Component {
 
         <TextField
            required
-           id="outlined-required"
+           id="email"
            label="Email"
            className={classes.textField}
            margin="normal"
@@ -97,7 +97,7 @@ class Contact extends Component {
          />
          <TextField
            required
-           id="outlined-required"
+           id="message"
            label="Message"
            multiline
            rows="5"
@@ -105,6 +105,7 @@ class Contact extends Component {
            margin="normal"
            variant="outlined"
            fullWidth
+           name="message"
            onChange={this.handleChange}
          />
         <p>
