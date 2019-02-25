@@ -46,7 +46,16 @@ class Contact extends Component {
         "form-name": form.getAttribute("name"),
         ...this.state
       })
-    }).catch(error => {
+    })
+    .then((response) => {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        this.setState({error: true})
+        return;
+      }
+    })
+    .catch(error => {
       if(error){ this.setState({error: true})}
     });
   }
