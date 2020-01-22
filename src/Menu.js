@@ -22,7 +22,7 @@ const styles = theme => ({
   },
   title: {
     fontSize: 16,
-    color: "#00ACC1",
+    color: "#878ea",
     padding: 12,
     marginBottom: 6,
   },
