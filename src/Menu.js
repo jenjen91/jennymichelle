@@ -19,6 +19,7 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     padding: 12,
+    color: "#878ea",
   },
   title: {
     fontSize: 16,
@@ -45,7 +46,7 @@ class Menu extends Component {
           onClick={this.toggleDrawer}
           >
           <Icon>{open ? 'close' : 'menu'}</Icon>
-          More
+           {open ? 'Less' : 'More'}
         </Button>
         <Button
           color="default"
@@ -53,9 +54,8 @@ class Menu extends Component {
           component={Link} to="/"
         >
           <Icon>home</Icon>
-          Home
+          Jenny Michelle
         </Button>
-        <div className={classes.title}> Jenny Michelle </div>
       </div>
     );
   }
