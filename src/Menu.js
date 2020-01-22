@@ -54,7 +54,7 @@ class Menu extends Component {
           component={Link} to="/"
         >
           <Icon>home</Icon>
-          Jenny Michelle
+          <span>Jenny Michelle</span>
         </Button>
       </div>
     );
