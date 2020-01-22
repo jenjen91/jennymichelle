@@ -39,7 +39,7 @@ const styles = theme => ({
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {open: false}
+    this.state = {open: true}
   }
   handleDrawer = (state) => {
     this.setState({open: state});
