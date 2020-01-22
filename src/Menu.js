@@ -19,7 +19,8 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     padding: 12,
-    color: "#878ea",
+    color: "#878ea0",
+    fontWeight: 'normal',
   },
   title: {
     fontSize: 16,
