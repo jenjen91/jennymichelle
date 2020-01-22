@@ -10,6 +10,9 @@ const styles = {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center'
+  },
+  cvpic: {
+    width: 500,
   }
 }
 class Home extends Component {
@@ -27,6 +30,9 @@ class Home extends Component {
           </i>
           <a href="https://www.linkedin.com/in/jennymichelle" alt="LinkedIn">LinkedIn</a>
         </nav>
+      <main>
+       <img className={classes.cvpic} src="/images/animated cv pic.gif" />
+      </main>
         <script
           type="IN/MemberProfile"
           data-id="http://www.linkedin.com/in/jennymichelle"
