@@ -9,17 +9,6 @@ function encode(data) {
     .join("&");
 }
 
-const styles = theme => ({
-  container: {
-    maxWidth: 500,
-    margin: '0px auto'
-  },
-  textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-  },
-});
-
 class Contact extends Component {
   constructor(props) {
     super(props);
