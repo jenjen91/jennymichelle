@@ -18,7 +18,11 @@ export const programmingdata = [
     viewlibrary: "React",
     database: "mongoDB and Algolia",
     deploy: "DigitalOcean",
+<<<<<<< HEAD
     href: "http://academicsummaries.com/"
+=======
+    github: "https://github.com/jenjen91/Acasum"
+>>>>>>> 274e2ea4d20355ea9ebdfcee11149c147aad2a0d
   },
   {
     img: '/images/sinnkropp.png',
@@ -27,8 +31,12 @@ export const programmingdata = [
     language: "",
     viewlibrary: "",
     database: "",
+<<<<<<< HEAD
     deploy: "",
     href: "https://www.sinnogkropp.no/"
+=======
+    deploy: ""
+>>>>>>> 274e2ea4d20355ea9ebdfcee11149c147aad2a0d
   },
   {
     img: '',

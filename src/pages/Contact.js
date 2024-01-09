@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+=======
+import Typography from '@mui/material/Typography'; // UPDATED IMPORT
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+>>>>>>> 274e2ea4d20355ea9ebdfcee11149c147aad2a0d
 
 function encode(data) {
   return Object.keys(data)
@@ -61,7 +67,10 @@ class Contact extends Component {
   }
 
   renderForm = () => {
+<<<<<<< HEAD
     const { classes } = this.props;
+=======
+>>>>>>> 274e2ea4d20355ea9ebdfcee11149c147aad2a0d
     return (
       <form
         name="contact"
@@ -81,7 +90,10 @@ class Contact extends Component {
            required
            id="name"
            label="Name"
+<<<<<<< HEAD
            className={classes.textField}
+=======
+>>>>>>> 274e2ea4d20355ea9ebdfcee11149c147aad2a0d
            margin="normal"
            variant="outlined"
            fullWidth
@@ -95,7 +107,10 @@ class Contact extends Component {
            required
            id="email"
            label="Email"
+<<<<<<< HEAD
            className={classes.textField}
+=======
+>>>>>>> 274e2ea4d20355ea9ebdfcee11149c147aad2a0d
            margin="normal"
            variant="outlined"
            type="email"
@@ -110,7 +125,10 @@ class Contact extends Component {
            label="Message"
            multiline
            rows="5"
+<<<<<<< HEAD
            className={classes.textField}
+=======
+>>>>>>> 274e2ea4d20355ea9ebdfcee11149c147aad2a0d
            margin="normal"
            variant="outlined"
            fullWidth
@@ -135,14 +153,21 @@ class Contact extends Component {
     </Typography>
   )
   render() {
+<<<<<<< HEAD
     const { classes } = this.props;
 
+=======
+>>>>>>> 274e2ea4d20355ea9ebdfcee11149c147aad2a0d
     return (
       <div>
         <Typography variant="h3" gutterBottom>
           Contact
         </Typography>
+<<<<<<< HEAD
         <div className={classes.container}>
+=======
+        <div>
+>>>>>>> 274e2ea4d20355ea9ebdfcee11149c147aad2a0d
           { !this.state.sendt ? this.renderForm() : this.state.error ? this.renderError() : this.renderSuccess() }
         </div>
       </div>
@@ -150,9 +175,13 @@ class Contact extends Component {
   }
 }
 
+<<<<<<< HEAD
 
 Contact.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Contact);
+=======
+export default Contact;
+>>>>>>> 274e2ea4d20355ea9ebdfcee11149c147aad2a0d
