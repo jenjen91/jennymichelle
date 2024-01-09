@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography'; // UPDATED IMPORT
+import Typography from '@mui/material/Typography'; 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';

@@ -1,6 +1,5 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Container from '@mui/material/Container';
-import logo from './logo.svg';
 import './App.css';
 import ResponsiveAppBar from './ResponsiveAppBar.jsx';
 import { pages } from "./pages/pages.js";
